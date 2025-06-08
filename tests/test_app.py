@@ -10,7 +10,7 @@ def client():
 def test_home(client):
     res = client.get('/')
     assert res.status_code == 200
-    assert b"API DevOps ativa" in res.data
+    assert b"Minha API de DevOps est" in res.data 
 
 def test_listar_usuarios_vazio(client):
     res = client.get('/usuarios')
